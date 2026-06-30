@@ -1,94 +1,189 @@
-@media screen and (max-width: 1400px){
-    #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
+/* ===========================
+   Large Screens (1200px)
+=========================== */
+ 
+@media screen and (max-width:1200px){
+ 
+    .main-content-wrapper{
+        width:95%;
     }
-    .about-containers {
-        flex-wrap: wrap;
+ 
+    .hero-title{
+        font-size:3.5rem;
     }
+ 
+    .hero-description{
+        font-size:1.3rem;
+    }
+ 
+    .bottom-nav{
+        padding:1rem 2rem;
+    }
+ 
+    .bottom-nav-links{
+        gap:1.2rem;
+    }
+ 
+    .white-content-block{
+        gap:2.5rem;
+    }
+ 
 }
-
-
-@media screen and (max-width: 1200px){
-    #desktop-nav{
-        display: none;
-    }
+ 
+ 
+/* ===========================
+   Tablets (992px)
+=========================== */
+ 
+@media screen and (max-width:992px){
+ 
+    /* Mobile Navigation */
+ 
     #hamburger-nav{
-        display: flex;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:1rem 1.5rem;
+        background:#111;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:999;
     }
-    #experience, .experience-details-container {
-        margin-top: 2rem;
+ 
+    .bottom-nav{
+        display:none;
     }
-    #profile, .section-container {
-        display: block;
+ 
+    .hero-section{
+        min-height:auto;
+        padding:7rem 1.5rem 3rem;
     }
-    .arrow {
-        display: none;
+ 
+    /* Pages that don't have a hero-section (the hamburger nav is fixed,
+       so the next element needs top padding or it hides under it) */
+    #hamburger-nav + .main-content-wrapper{
+        padding-top:5rem;
     }
-    section, .section-container {
-        height: fit-content;
+ 
+    .hero-title{
+        font-size:3rem;
+        letter-spacing:0.15rem;
     }
-    section {
-        margin: 0 5%;
+ 
+    .hero-description{
+        font-size:1.2rem;
     }
-    .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
+ 
+    /* Collapse the two-column text/image layout into one stacked column */
+    .white-content-block{
+        flex-direction:column;
+        align-items:stretch;
+        gap:2rem;
+        padding:3rem 2rem;
     }
-
-    .about-containers {
-        margin-top: 0;
+ 
+    .block-title{
+        text-align:left;
+        font-size:2.2rem;
+        margin-bottom:1rem;
     }
+ 
+    .description-text{
+        max-width:100%;
+        text-align:left;
+        margin:0;
+    }
+ 
+    .block-image-container img{
+        width:80%;
+        margin:0 auto;
+    }
+ 
 }
-
-@media screen and (max-width: 600px){
-    #contact, footer {
-        height: 40vh;
+ 
+ 
+/* ===========================
+   Phones (768px)
+=========================== */
+ 
+@media screen and (max-width:768px){
+ 
+    .hero-title{
+        font-size:2.4rem;
+        letter-spacing:0;
+        line-height:1.2;
     }
-    #profile {
-        height: 83vh;
-        margin-bottom: 0;
+ 
+    .hero-description{
+        font-size:1rem;
+        max-width:100%;
     }
-    article {
-        font-size: 1rem;
+ 
+    .scroll-down-icon{
+        font-size:2rem;
     }
-    footer nav{
-        height: fit-content;
-        margin-bottom: 2rem;
+ 
+    .white-content-block{
+        padding:2.5rem 1.5rem;
     }
-    .about-containers, .contact-info-upper-container, .btn-container {
-        flex-wrap: wrap;
+ 
+    .block-title{
+        font-size:1.8rem;
     }
-    .contact-info-container {
-        margin: 0;
+ 
+    .description-text{
+        font-size:1rem;
     }
-    .contact-info-container p, .nav-links li a {
-        font-size: 1rem;
+ 
+    .block-image-container img{
+        width:100%;
+        max-width:400px;
+        margin:0 auto;
     }
-    .experience-sub-title{
-        font-size: 1.25rem;
-    }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    .section__pic-container {
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
-    .section__text__p2 {
-        font-size: 1.25rem;
-    }
-    .title {
-        font-size: 2rem;
-    }
-    .text-container {
-        text-align: justify;
-    }
+ 
 }
+ 
+ 
+/* ===========================
+   Small Phones (480px)
+=========================== */
+ 
+@media screen and (max-width:480px){
+ 
+    .hero-section{
+        padding:5rem 1rem 2rem;
+    }
+ 
+    #hamburger-nav + .main-content-wrapper{
+        padding-top:4.5rem;
+    }
+ 
+    .hero-title{
+        font-size:2rem;
+    }
+ 
+    .hero-description{
+        font-size:0.95rem;
+    }
+ 
+    .white-content-block{
+        padding:2rem 1rem;
+    }
+ 
+    .block-title{
+        font-size:1.5rem;
+    }
+ 
+    .description-text{
+        font-size:0.95rem;
+    }
+ 
+    .block-image-container img{
+        width:100%;
+        margin:0 auto;
+    }
+ 
+}
+ 
