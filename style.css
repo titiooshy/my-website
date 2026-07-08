@@ -445,16 +445,116 @@ section {
 }
 
 /* Contact form labels need to override the global dark section text color */
+#experience-intro label {
+    color: #fff;
+}
+
 #experience-intro .contact-info-item {
     color: #fff;
+}
+
+/* ===========================
+   Project Cards (projects.html)
+=========================== */
+
+.project-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem 4rem;
+    border-top: 1px solid #eee;
+}
+
+.project-text {
+    flex: 1 1 40%;
+    min-width: 0;
+    padding-top: 0.5rem;
+}
+
+.project-title {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #121212;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #121212;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.project-link:hover {
+    color: #b5715e;
+}
+
+.project-description {
+    color: #333;
+    line-height: 1.6;
+}
+
+.project-media {
+    flex: 1 1 55%;
+    min-width: 0;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* The screenshot sits full-height; buttons float on top of it near the bottom */
+.project-preview-img {
+    width: 100%;
+    display: block;
+}
+
+.project-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-media:hover .project-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    background-color: rgba(30, 30, 30, 0.88);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-#experience-intro .contact-info-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #00ffff;
+.project-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.project-btn:hover {
+    background-color: #00ffff;
+    color: #111;
     text-decoration: none;
 }
