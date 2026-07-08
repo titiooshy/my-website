@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
- 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
- 
+
 body {
     font-family: "Poppins", sans-serif;
     color: white; 
@@ -18,16 +18,16 @@ body {
     background-attachment: fixed; /* This creates the parallax effect */
     background-color: #121212; 
 }
- 
+
 html {
     scroll-behavior: smooth;
     height: 100%;
 }
- 
+
 p {
     color: rgb(181, 181, 181); 
 }
- 
+
 /* TRANSITIONS and A/HOVER styles */
 a, .btn{
     transition: all 300ms ease;
@@ -38,23 +38,23 @@ a, .btn{
 .menu-links {
     transition: all 0.3s ease-in-out; 
 }
- 
+
 a {
     color: white; 
     text-decoration: none;
 }
- 
+
 a:hover {
     color: #00ffff; 
     text-decoration: underline;
     text-underline-offset: 0.5rem; 
     text-decoration-color: #00ffff;
 }
- 
+
 .logo {
     font-size: 2rem;
 }
- 
+
 /* HAMBURGER MENU (for mobile) */
 #hamburger-nav {
     display: none;
@@ -68,11 +68,11 @@ a:hover {
     width: 100%;
     z-index: 1000;
 }
- 
+
 .hamburger-menu {
     position: relative;
 }
- 
+
 .hamburger-icon {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ a:hover {
     height: 22px;
     cursor: pointer;
 }
- 
+
 .hamburger-icon span {
     width: 100%;
     height: 3px;
@@ -89,9 +89,9 @@ a:hover {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
- 
+
 /* Dropdown Menu */
- 
+
 .menu-links {
     position: absolute;
     top: 45px;
@@ -100,19 +100,19 @@ a:hover {
     width: 220px;
     border-radius: 8px;
     overflow: hidden;
- 
+
     display: flex;
     flex-direction: column;
- 
+
     max-height: 0;
     opacity: 0;
     transition: all 0.3s ease;
 }
- 
+
 .menu-links li {
     list-style: none;
 }
- 
+
 .menu-links a {
     display: block;
     padding: 15px 20px;
@@ -120,35 +120,35 @@ a:hover {
     text-decoration: none;
     transition: background 0.3s ease;
 }
- 
+
 .menu-links a:hover {
     background: #00ffff;
     color: #111;
 }
- 
+
 /* Open Menu */
- 
+
 .menu-links.open {
     max-height: 500px;
     opacity: 1;
 }
- 
+
 /* Animate Hamburger */
- 
+
 .hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(6px, 6px);
 }
- 
+
 .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
 }
- 
+
 .hamburger-icon.open span:last-child {
     transform: rotate(-45deg) translate(7px, -7px);
 }
- 
+
 /*  HERO SECTION (Only used on index.html)  */
- 
+
 .hero-section {
     min-height: 75vh; 
     margin: 0; 
@@ -162,7 +162,7 @@ a:hover {
     background: transparent; /* Transparent to show the body's fixed background */
     isolation: isolate; 
 }
- 
+
 /* Dark Overlay */
 .hero-section::after {
     content: '';
@@ -174,14 +174,14 @@ a:hover {
     background-color: rgb(8, 21, 51); 
     z-index: 1; 
 }
- 
+
 /* Hero Content */
 .hero-content {
     z-index: 10; 
     padding-top: 0; 
     padding-bottom: 5rem; /* keeps content clear of the absolutely-positioned bottom-nav */
 }
- 
+
 .hero-title {
     font-size: 4rem; 
     font-weight: 550;
@@ -189,7 +189,7 @@ a:hover {
     margin-bottom: 0.5rem;
     color: white;
 }
- 
+
 .hero-description {
     font-size: 1.5rem;
     font-weight: 300;
@@ -197,7 +197,7 @@ a:hover {
     max-width: 600px;
     margin: 0 auto 3rem auto;
 }
- 
+
 /* Scroll Down Arrow */
 .scroll-down-icon {
     font-size: 3rem;
@@ -212,7 +212,7 @@ a:hover {
     40% {transform: translateY(-20px);}
     60% {transform: translateY(-10px);}
 }
- 
+
 /* BOTTOM FLOATING NAVIGATION BAR */
 .bottom-nav {
     position: absolute;
@@ -227,7 +227,7 @@ a:hover {
     padding: 1rem 5rem; 
     border-top: 1px solid rgb(255, 255, 255);
 }
- 
+
 .bottom-nav-links {
     display: flex;
     list-style: none;
@@ -235,30 +235,30 @@ a:hover {
     padding: 0;
     margin: 0;
 }
- 
+
 .bottom-nav-links a {
     color: white;
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
     opacity: 0.7;
 }
- 
+
 .bottom-nav-links a:hover {
     opacity: 1;
     text-decoration: none;
     color: #00ffff;
 }
- 
+
 .social-links a {
     margin-left: 1rem;
     color: white;
     font-size: 1.25rem;
     opacity: 0.7;
 }
- 
- 
+
+
 /* MAIN CONTENT WRAPPER (The central white column that scrolls) */
- 
+
 .main-content-wrapper {
     /* Starts after the hero section (or immediately on subpages) */
     width: 100%;
@@ -275,7 +275,7 @@ a:hover {
         color: #121212; 
     }
 }
- 
+
 /* Section Resets */
 section {
     height: auto; 
@@ -287,7 +287,7 @@ section {
     position: static; 
     color: #121212; 
 }
- 
+
 /* 1. Two-Column Content Block (image sits aligned beside its section text) */
 .white-content-block {
     display: flex;
@@ -297,18 +297,18 @@ section {
     gap: 4rem;
     padding: 4rem;
 }
- 
+
 .white-content-block .block-text {
     flex: 1 1 50%;
     min-width: 0;
 }
- 
+
 .white-content-block .date {
     font-size: 0.8rem;
     margin-bottom: 1rem;
     color: #888;
 }
- 
+
 .block-title {
     display: block;
     font-size: 2.5rem;
@@ -337,7 +337,7 @@ section {
     text-align: left;
     color: #121212;
 }
- 
+
 .description-text {
     display: block;
     max-width: 500px;
@@ -382,12 +382,12 @@ section {
     color: #504f4f;
     text-align: left;
 }
- 
+
 .block-image-container {
     flex: 1 1 50%;
     min-width: 0;
 }
- 
+
 .block-image-container img {
     width: 100%;
     max-width: 100%;
@@ -395,8 +395,8 @@ section {
     display: block;
     border-radius: 12px;
 }
- 
- 
+
+
 /* 2. Three Column Layout (For process/system/about summaries) */
 .three-column-layout {
     display: flex;
@@ -405,26 +405,26 @@ section {
     gap: 3rem;
     border-top: 1px solid #eee;
 }
- 
+
 .column-block {
     flex: 1;
     text-align: center;
 }
- 
+
 .column-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: #121212;
 }
- 
+
 .column-block p {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     color: #333;
 }
- 
+
 /* Button Styling for Content Blocks */
 .btn-block {
     display: inline-block;
@@ -438,8 +438,23 @@ section {
     transition: all 0.3s ease;
     color: #121212 !important;
 }
- 
+
 .btn-block:hover {
     background-color: #121212;
     color: white !important;
+}
+
+/* Contact form labels need to override the global dark section text color */
+#experience-intro .contact-info-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#experience-intro .contact-info-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00ffff;
+    text-decoration: none;
 }
