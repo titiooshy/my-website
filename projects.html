@@ -68,7 +68,11 @@
                     <span class="project-title">Automatic Alt-Text Generation </span>
                     <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
                     <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
+                        Explored the viability of automated web accessibility tools by fine-tuning BLIP, a vision-language model, on the Flickr30k dataset to generate image alt-text. Built a custom PyTorch training pipeline with beam search inference, achieving a stabilized validation loss of ~2.01 across 3 training epochs.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Identified key limitations of automated captioning for accessibility by running controlled image-processing experiments, finding the model consistently missed specific actions and contextual detail. Communicated these findings through a full project walkthrough video and reproducible Colab notebooks.
                     </p>
                 </div>
  
@@ -105,7 +109,11 @@
                     <span class="project-title">The FitBot</span>
                     <a href="https://titiooshy.github.io/pie-2025-03/the-fitbot/" target="_blank" rel="noopener noreferrer" class="project-link">the FitBot Webpage</a>
                     <p class="project-description">
-                        Arduino powered smartwatch that tracks the users personal health and exercise.
+                        Developed embedded firmware in Arduino IDE to enable real-time motion and vital sign tracking on a resource-constrained wearable device, engineering closed-loop sensor calibration and signal conditioning pipelines to ensure accurate heart rate, step, and activity detection under dynamic conditions. Built a user-centered wearable interface delivering real-time, actionable feedback on the device's small screen.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Designed and implemented a web-based dashboard for remote visualization, trend analysis, and system documentation, integrating interactive charts and live data updates. Applied software-hardware integration practices and control logic design to deliver a cohesive, functional wearable system spanning firmware, real-time processing, and UI/UX.
                     </p>
                 </div>
  
@@ -142,12 +150,16 @@
                     <span class="project-title">Simple Scientific Modeling of Pharmakokinetics</span>
                     <a href="https://github.com/olincollege/scicomp-p3-to-pharmacokinetics" target="_blank" rel="noopener noreferrer" class="project-link">Pharmakokinetics Modeling</a>
                     <p class="project-description">
-                        Using scientific models derived from academic papers to determine how the human body processes drugs.
+                        Modeled the pharmacokinetics of intravenous amiodarone, a drug with complex, multi-phase distribution and elimination behavior, by building one- and two-compartment ODE models in Python and numerically solving them with <code>scipy.integrate.solve_ivp.</code> Validated model accuracy against published literature by computing RMSE-based error metrics between simulated and experimental drug concentration data.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Assessed model robustness and identified key drivers of drug behavior by conducting a sensitivity analysis, varying core parameters (clearance, volume of distribution, inter-compartment flow) by ±20%. Ensured code correctness and reliability across the modeling pipeline by writing a full <code>pytest</code> test suite covering ODE definitions, simulation, and validation logic.
                     </p>
                 </div>
  
                 <div class="project-media">
-                    <img src="images/asteroids.png" alt="Image of pharma project" class="project-preview-img">
+                    <img src="images/pharma.png" alt="Image of pharma project" class="project-preview-img">
  
                     <div class="project-buttons">
                         <a href="https://github.com/olincollege/scicomp-p3-to-pharmacokinetics" class="project-btn">
@@ -168,15 +180,19 @@
         <div class="project-card">
  
                 <div class="project-text">
-                    <span class="project-title"></span>
+                    <span class="project-title">Asteriod Family Identification using DBSCAN</span>
                     <a href="https://github.com/olincollege/scicomp-p1-to-asteroids" target="_blank" rel="noopener noreferrer" class="project-link">Asteroid Family Identification</a>
                     <p class="project-description">
-                        Automatic Identification of Trojan Asteroid Families Using DBSCAN and the Zappalà Velocity Metric.
+                        Identified 7 Trojan asteroid families from a catalog of 11,801 asteroids by implementing the Zappalà velocity metric combined with DBSCAN clustering, benchmarked against the AstDys ground truth catalog. Computed a ~69.6 million-entry pairwise distance matrix using <code>scipy.spatial.distance.pdist</code> with a custom physics-based metric, then applied <code>sklearn</code>'s DBSCAN to recover dense clusters while excluding background noise.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Achieved 100% completeness across all 7 target families by tuning the DBSCAN velocity cutoff <code>(eps = 50 m/s)</code> through systematic parameter sweeping, outperforming the classical hierarchical clustering approach which suffered from cluster-chaining effects. Evaluated results against ground truth using completeness and contamination metrics, and built a modular Python pipeline (preprocessing, clustering, evaluation, visualization) that runs end-to-end from raw data to publication-ready plots.
                     </p>
                 </div>
  
                 <div class="project-media">
-                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
+                    <img src="images/asteroids.png" alt="asteroids repo" class="project-preview-img">
  
                     <div class="project-buttons">
                         <a href="https://github.com/olincollege/scicomp-p1-to-asteroids" class="project-btn">
@@ -200,12 +216,16 @@
                     <span class="project-title">Ant Trail Simulation</span>
                     <a href="https://github.com/olincollege/scicomp-p1-ant-trail-simulation" target="_blank" rel="noopener noreferrer" class="project-link">Ant Trail Formation</a>
                     <p class="project-description">
-                        Modeling an ant trail formation using a cellular automata simulation.
+                        Modeled ant trail network formation using a cellular automaton simulation based on Watmough & Edelstein-Keshet's foraging ant paper, by implementing agent-based modeling to simulate hundreds of individual ants with local sensing capabilities on a 220x220 grid. Built a "Fork Algorithm" using extreme forward bias to replicate realistic branching structures, successfully modeling the transition from random exploration to established foraging trunks.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Validated agent behaviors against the source paper's mathematical rules by writing a robust <code>pytest</code> test suite covering movement, pheromone decay, and boundary conditions. Enabled exploration of different network topologies by building a tunable parameter system (fidelity, evaporation rate, deposition) in <code>constants.py</code>, benchmarked against two case studies (Constant and Piecewise Linear Fidelity) from the original paper.
                     </p>
                 </div>
  
                 <div class="project-media">
-                    <img src="images/ants.png" alt="Alt-text website" class="project-preview-img">
+                    <img src="images/ants.png" alt="ant trail repo" class="project-preview-img">
  
                     <div class="project-buttons">
                         <a href="https://github.com/olincollege/scicomp-p1-ant-trail-simulation" class="project-btn">
@@ -225,11 +245,236 @@
         <div class="project-card">
  
                 <div class="project-text">
+                    <span class="project-title">TCP Chat Application</span>
+                    <a href="https://github.com/titiooshy/terminal-chats" target="_blank" rel="noopener noreferrer" class="project-link">C TCP Chat</a>
+                    <p class="project-description">
+                        Built a multithreaded terminal chat server in C using raw TCP sockets and POSIX threads, enabling multiple clients to connect and exchange messages in real time. Implemented a mutex-protected linked list to safely track connected clients across threads, along with a broadcast function to relay messages to all users except the sender.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Ensured reliability and safe shutdown by implementing a graceful SIGINT handler that closes all client connections and frees memory before exiting. Added timestamped server-side logging to track client connections, disconnections, and message activity in real time.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/.png" alt="simple tcp chat look on terminal" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://github.com/titiooshy/terminal-chats" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            GitHub Documentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
+                    <span class="project-title">High-Security Checksum Validation System</span>
+                    <a href="https://github.com/titiooshy/discrete-final" target="_blank" rel="noopener noreferrer" class="project-link">German Banknote Checksum</a>
+                    <p class="project-description">
+                        Applied group theory and modular arithmetic concepts from discrete math to financial security, by implementing the Verhoeff check digit algorithm in Python to validate the authenticity of bank note numbers. Built a dual-mode command-line interface allowing users to either verify an existing bank note number or generate a valid check digit for a given number.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                       Collaborated in a 4-person team to design and build the algorithm's core validation logic, ensuring accurate detection of invalid or tampered numbers through modular checksum computation. Structured the codebase into separate modules for algorithm logic and user interaction, supporting clear separation of concerns and ease of testing.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/bank.png" alt="check-sum repo" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://github.com/titiooshy/discrete-final" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Visit Repository
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1M8Sn5Awitiv8idVAEh0APcL5JXVHbkjU" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Project Documentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
+                    <span class="project-title">Autonomous Line Following Robot with Embedded Control</span>
+                    <a href="https://docs.google.com/document/d/1AfQnukf_6XR2etsTIWqnuIiXYxMFdJQyELC0KxFptN0/edit?tab=t.0#heading=h.fjyld64xmjlf" target="_blank" rel="noopener noreferrer" class="project-link">Line Follower Robot</a>
+                    <p class="project-description">
+                        Designed an embedded robotic system integrating dual IR reflectance sensors, DC motors, and an Arduino-based control loop, enabling autonomous line-following through differential drive motor control. Performed sensor calibration and signal conditioning, computing dynamic threshold values from carpet and tape readings, to achieve reliable tape detection across varying floor surfaces.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                       Developed a real-time closed-loop feedback controller using boolean sensor logic to drive proportional turning corrections, adjusting motor speed and direction to maintain path tracking during dynamic movement. Applied control systems principles and iterative testing to optimize turning responsiveness and stability, refining motor speed, delay timing, and sensor placement to achieve smooth, accurate line-following performance.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/robot.png" alt="robot photo" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://www.youtube.com/shorts/4Oevho5gyLQ" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://docs.google.com/document/d/1AfQnukf_6XR2etsTIWqnuIiXYxMFdJQyELC0KxFptN0/edit?tab=t.0#heading=h.fjyld64xmjlf" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Project Documentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
+                    <span class="project-title">Embedded Systems 3D Scanner</span>
+                    <a href="https://docs.google.com/document/d/166mzFaIkLMlprfBcwv_LYsH1mDGiIFlNfxrlSBuJPsE/edit?tab=t.0#heading=h.1k6rcqf28py5" target="_blank" rel="noopener noreferrer" class="project-link">3D Scanner</a>
+                    <p class="project-description">
+                        Prototyped a DIY 3D scanning system by integrating an Arduino, an infrared distance sensor, and a custom pan/tilt rig, designing and 3D-printing a mechanical housing in SolidWorks to enable synchronized panning and tilting motion. Programmed servo-driven sweep control and calibrated the IR sensor using a power-law voltage-to-distance fit, validating accuracy through calibration error plots comparing predicted versus actual measurements.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Converted raw sensor data into 2D and 3D visualizations by transforming pan/tilt scan angles from spherical to Cartesian coordinates in MATLAB, bridging hardware design with software modeling. Diagnosed sources of scan noise through systematic testing of wiring, trigonometric calculations, and servo resolution, identifying mechanical housing instability as the primary driver of data inaccuracy.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/scanner.png" alt="scanner image" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://docs.google.com/document/d/166mzFaIkLMlprfBcwv_LYsH1mDGiIFlNfxrlSBuJPsE/edit?tab=t.0#heading=h.1k6rcqf28py5" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Project Documentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
+                    <span class="project-title">Graph-Based Shortest Path Algorithms & Visualization Toolkit For Blood Transfusions</span>
+                    <a href="https://github.com/titiooshy/blood-transfusion-" target="_blank" rel="noopener noreferrer" class="project-link">Blood Transfusion Shortest Path</a>
+                    <p class="project-description">
+                        Enabled full network distance analysis across weighted graphs by implementing Dijkstra's algorithm and the Floyd-Warshall algorithm in Python using NetworkX, computing both single-source and all-pairs shortest paths. Supported flexible node and edge configurations for reusability across graph structures, by designing modular graph setup utilities.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Verified pathfinding behavior and algorithm correctness by developing graph visualization components. Compared performance tradeoffs between shortest-path approaches by applying algorithmic complexity analysis, writing clean, readable code organized around separation of concerns.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/path.png" alt="image of shortest path" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://github.com/titiooshy/blood-transfusion-" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            GitHub Repository
+                        </a>
+                        <a href="https://docs.google.com/presentation/d/1yd09GOdRFgUkmi2-hus79cCU1iqjsHj3KMsIWqCOp-0/edit?slide=id.p#slide=id.p" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Project Presentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
                     <span class="project-title">Automatic Alt-Text Generation </span>
                     <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
                     <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
+                        Built a multithreaded terminal chat server in C using raw TCP sockets and POSIX threads, enabling multiple clients to connect and exchange messages in real time. Implemented a mutex-protected linked list to safely track connected clients across threads, along with a broadcast function to relay messages to all users except the sender.
                     </p>
+                    <br>
+                    <p class="project-description">
+                        Ensured reliability and safe shutdown by implementing a graceful SIGINT handler that closes all client connections and frees memory before exiting. Added timestamped server-side logging to track client connections, disconnections, and message activity in real time.
+                </div>
+ 
+                <div class="project-media">
+                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
+ 
+                    <div class="project-buttons">
+                        <a href="https://automamatic-alt-text-generation.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Visit Website
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1c-hG2sNH5KILo0gLUnA2KiaqM9gIW0Vt?usp=drive_link" class="project-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Project Documentation
+                        </a>
+                    </div>
+                </div>
+ 
+            </div>
+
+            </section>
+
+        <div class="project-card">
+ 
+                <div class="project-text">
+                    <span class="project-title">Automatic Alt-Text Generation </span>
+                    <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
+                    <p class="project-description">
+                        Built a multithreaded terminal chat server in C using raw TCP sockets and POSIX threads, enabling multiple clients to connect and exchange messages in real time. Implemented a mutex-protected linked list to safely track connected clients across threads, along with a broadcast function to relay messages to all users except the sender.
+                    </p>
+                    <br>
+                    <p class="project-description">
+                        Ensured reliability and safe shutdown by implementing a graceful SIGINT handler that closes all client connections and frees memory before exiting. Added timestamped server-side logging to track client connections, disconnections, and message activity in real time.
                 </div>
  
                 <div class="project-media">
@@ -293,152 +538,6 @@
  
             </div>
 
-
-            </section>
-
-        <div class="project-card">
- 
-                <div class="project-text">
-                    <span class="project-title">Automatic Alt-Text Generation </span>
-                    <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
-                    <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
-                    </p>
-                </div>
- 
-                <div class="project-media">
-                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
- 
-                    <div class="project-buttons">
-                        <a href="https://automamatic-alt-text-generation.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Visit Website
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1c-hG2sNH5KILo0gLUnA2KiaqM9gIW0Vt?usp=drive_link" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                            </svg>
-                            Project Documentation
-                        </a>
-                    </div>
-                </div>
- 
-            </div>
-
-
-            </section>
-
-        <div class="project-card">
- 
-                <div class="project-text">
-                    <span class="project-title">Automatic Alt-Text Generation </span>
-                    <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
-                    <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
-                    </p>
-                </div>
- 
-                <div class="project-media">
-                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
- 
-                    <div class="project-buttons">
-                        <a href="https://automamatic-alt-text-generation.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Visit Website
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1c-hG2sNH5KILo0gLUnA2KiaqM9gIW0Vt?usp=drive_link" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                            </svg>
-                            Project Documentation
-                        </a>
-                    </div>
-                </div>
- 
-            </div>
-
-            </section>
-
-        <div class="project-card">
- 
-                <div class="project-text">
-                    <span class="project-title">Automatic Alt-Text Generation </span>
-                    <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
-                    <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
-                    </p>
-                </div>
- 
-                <div class="project-media">
-                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
- 
-                    <div class="project-buttons">
-                        <a href="https://automamatic-alt-text-generation.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Visit Website
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1c-hG2sNH5KILo0gLUnA2KiaqM9gIW0Vt?usp=drive_link" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                            </svg>
-                            Project Documentation
-                        </a>
-                    </div>
-                </div>
- 
-            </div>
-
-
-            </section>
-
-        <div class="project-card">
- 
-                <div class="project-text">
-                    <span class="project-title">Automatic Alt-Text Generation </span>
-                    <a href="https://citethis.net" target="_blank" rel="noopener noreferrer" class="project-link">https://automamatic-alt-text-generation.netlify.app/</a>
-                    <p class="project-description">
-                        A look at automatic image description using vision-language models from Kaggle.
-                    </p>
-                </div>
- 
-                <div class="project-media">
-                    <img src="images/ml-final.png" alt="Alt-text website" class="project-preview-img">
- 
-                    <div class="project-buttons">
-                        <a href="https://automamatic-alt-text-generation.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Visit Website
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1c-hG2sNH5KILo0gLUnA2KiaqM9gIW0Vt?usp=drive_link" class="project-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                            </svg>
-                            Project Documentation
-                        </a>
-                    </div>
-                </div>
- 
-            </div>
 
         
     </div>
