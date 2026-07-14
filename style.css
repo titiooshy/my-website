@@ -11,7 +11,7 @@ body {
     color: white; 
     overflow-x: hidden; 
     
-    /* 💡 Parallax Background Setup: Fixed background on the body */
+    /* Parallax Background Setup: Fixed background on the body */
     background-image: url('image_of_fitbot_machine.jpg'); /* **CHANGE THIS PATH** */
     background-size: cover;
     background-position: center;
@@ -198,6 +198,16 @@ a:hover {
     margin: 0 auto 3rem auto;
 }
 
+.hero-star {
+    position: absolute;
+    top: 12%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    z-index: 2;
+}
+
 /* Scroll Down Arrow */
 .scroll-down-icon {
     font-size: 3rem;
@@ -249,11 +259,27 @@ a:hover {
     color: #00ffff;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .social-links a {
-    margin-left: 1rem;
-    color: white;
-    font-size: 1.25rem;
     opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1); /* turns a black icon white */
+    display: block;
 }
 
 
@@ -336,6 +362,13 @@ section {
     line-height: 1.1;
     text-align: left;
     color: #121212;
+}
+
+.block-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .description-text {
@@ -442,6 +475,23 @@ section {
 .btn-block:hover {
     background-color: #121212;
     color: white !important;
+}
+
+.hover-button {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    border-radius: 12px;
+}
+
+.hover-button:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    background-color: #fafafa; /* subtle tint on hover, optional */
+}
+
+.hover-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact form labels need to override the global dark section text color */

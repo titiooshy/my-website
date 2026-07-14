@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phase 3 Design Reflection</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #0a0918;
+        font-family: "Poppins", serif;
+        color: white;
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+
+    .breadcrumb {
+        padding: 1.5rem 1rem;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.05rem;
+        color: #ddd;
+        text-transform: uppercase;
+    }
+
+    .breadcrumb a {
+        color: #ddd;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .post-header {
+        max-width: 800px;
+        margin: 3rem auto 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .post-title {
+        font-size: 2.75rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+    }
+
+    .post-byline {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.95rem;
+        color: #888;
+    }
+
+    .post-byline .author {
+        color: #888;
+        font-weight: 600;
+    }
+
+    .post-byline .date {
+        color: #888;
+        font-weight: 600;
+    }
+
+    .post-image {
+        max-width: 900px;
+        margin: 3rem auto 0 auto;
+        padding: 0 1rem;
+    }
+
+    .post-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .post-body {
+        max-width: 750px;
+        margin: 3rem auto 0 auto;
+        padding: 0 1rem;
+        text-align: left;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #ddd;
+    }
+
+    .post-body h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 2.5rem 0 1rem 0;
+    }
+
+    .post-body p {
+        margin-bottom: 1.5rem;
+        color: #ddd;
+    }
+
+    .post-gallery {
+        max-width: 900px;
+        margin: 3rem auto 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .post-gallery img {
+        width: 70%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    @media screen and (max-width: 600px) {
+        .post-gallery {
+            flex-direction: column;
+        }
+
+        .post-gallery img {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <nav class="breadcrumb">
+    <a href="index.html">Home</a> --> 
+    <a href="compositions.html">Compositions</a> --> 
+    What Kind of Thing Is This, Exactly?
+    </nav>
+
+    <div class="post-header">
+        <h1 class="post-title">What Kind of Thing Is This, Exactly?</h1>
+        <p class="post-byline">
+            By <span class="author">Titilayo Oshinowo</span> on <span class="date">May 2nd, 2026</span>
+        </p>
+        <p class="post-byline" style="margin-top: 0.5rem;">CD Phase 3 Reflection</p>
+    </div>
+
+    <div class="post-image">
+        <img src="images/third.png" alt="Banner image of prosthetist and child with Pawsthetics" style="width: 80%; height: auto;">
+    </div>
+
+    <div class="post-body">
+        <h2>What</h2>
+        <p>Midway through the Develop phase of the design process, I had the opportunity to sit down and talk with a professor about where Pawsthetics stood. For the most part, I expected to get feedback on our requirements table or our prototypes (visual and the three-dimensional model). Through this conversation, a thing I did not expect was the question that stopped me cold: questions to the connection of the significance and its connections to the FIC model. Questions like: "So: what is this, really? Is it a toy? A clinical tool? A communication aid? How would you characterize it?"</p>
+
+        <p>At first I opened my mouth to answer this question and then closed it again. My CD had spent weeks developing and describing the idea of Pawsthetics (a plush animal that receives a miniature prosthesis alongside its child patient) and the definitions of what it does: with the product providing emotional support, teaching children how their device works, giving prosthetists a window into how a patient experiences their prosthesis. We had drafted an FIC diagram on our board, a broad interaction map, and a requirements table with metrics and rationale. But when asked what Pawsthetics fundamentally is, for example, what category of designed object it belongs to, I realized I had never committed to an answer. I hedged, reaching for phrases like "it's kind of a toy but also a clinical aid," and I watched the professor smile in that patient way that means you haven't answered the question.</p>
+
+        <p>We went back and forth for a while. He pushed: if a prosthetist hands this to a patient, what does the patient understand themselves to be holding? A fun stuffed animal with a funny leg attachment to help build the bond between the patient and the prosthetist, or a piece of medical equipment? We had been proudly straddling that line, and now I could feel the wobble in it.</p>
+
+        <h2>So What</h2>
+        <p>The conversation that I had surfaced something I had been unconsciously avoiding: characterization is a design decision, not a description. When my CD mapped Pawsthetics' intended attributes (it being assistive, a communication aid, informative, comfort-giving, play-enhancing) we were essentially listing properties we wished it would have. But the character of a designed object isn't just a checklist; it's a coherent identity that shapes every downstream decision, from material choices to how the artifact is introduced in a clinical setting.</p>
+
+        <p>The one-on-one with the professor helped me see that the characterization of Pawsthetics as a "toy that also teaches" and "clinical aid that also comforts" are not the same thing, even if they describe similar behaviors. The first frames the object's primary identity as playful and child-centered, with therapeutic benefit as a welcome side effect. The second frames it as an instrument of care, with joy as a secondary feature. That distinction matters enormously for how a prosthetist would introduce it ("I have something fun for you" versus "I want to show you something that might help"), and how the child would internalize what the object means during a genuinely difficult time in their life.</p>
+
+        <p>The lesson is that sitting comfortably across multiple characterizations can feel like flexibility, but it often just means deferring a hard choice. Sometimes the most important design work is committing to what your thing is, and being honest about what that forecloses.</p>
+
+        <h2>Now What</h2>
+        <p>Coming out of that conversation, I communicated to my team that we should go back to the board and ask: if we had to pick one characterization, what would it be? We landed on "a comfort object with embedded clinical utility," meaning the toy identity is primary and load-bearing, because that is what makes a child trust it, carry it home, and interact with it between appointments. The clinical functions are real and important, but they ride on top of a fundamentally playful, child-owned artifact. That framing then rippled outward: it confirmed why the plush material and huggable character mattered as much as the prosthesis mechanics, and it clarified that prosthetists should introduce Pawsthetics as a gift, not as a training device.</p>
+
+        <p>A token that I recommend for future CD students: any time you find yourself describing your artifact as "both X and Y," take that as an opportunity to ask whether X and Y are truly integrated or whether you're avoiding a commitment. Sometimes genuine hybridity is the answer, a thing can really be two things at once, and that tension can be productively designed. But the difference between intentional hybridity and unresolved ambiguity is whether you have consciously chosen it and can defend why the combination is coherent.</p>
+
+        <p>However this approach can hold real limits to how far this lesson travels. In very early-stage design, deliberate ambiguity keeps options open and is entirely appropriate. And in contexts where stakeholders themselves disagree about what a solution should be, committing too early can foreclose conversations that need to stay open. But at some point, the designer has to pick up a pen and draw a circle around one frame. That act of commitment (even when it's provisional, even when it might change) is itself a form of design.</p>
+
+        <h2>Looks Like</h2>
+        <p>The banner image I created shows a prosthetist and a child at the moment of handoff of their Pawsthetic, the prosthetist's speech bubble crossed out, replaced by a viewpoint to fit a stronger bond between both parties. I would like future students to notice that it is not the analytical results of your design outputs that matter (like the clinical clipboard or the prosthetic leg leaning in the background) as those are easy concepts to see. I want them to notice the child's eyes are closed. She is not looking at the object analytically. She is already hugging it. This ties back to the characterization question my professor asked me ("what is this, really?") is not only answered with our requirements table but along with the child's posture and improving the design goal met for both parties. A comfort object does not get evaluated. It gets held.</p>
+    </div>
+
+    <div class="post-gallery">
+        <img src="images/sec3.png" alt="Photo related to the story">
+        <img src="images/sec4.png" alt="Photo related to the story">
+    </div>
+
+</body>
+</html>
